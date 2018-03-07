@@ -1,0 +1,432 @@
+/*-----------------------------------------------------------------
+[Services]
+-----------------------------------------------------------------*/
+.services {
+
+	&-wrap {
+		.clearspace;
+		margin-bottom: -72px;
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		width: 100/3%;
+		text-align: center;
+		margin-bottom: 72px;
+		padding: 0 16px;
+		word-wrap: break-word;
+
+		&-img {
+			display: inline-block;
+			margin-bottom: 22px;
+			width: 120px;
+			height: 120px;
+			padding: 24px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 50% auto;
+
+			&_bordered {border: 4px solid @yellow;}
+		}
+		&-caption {
+			font-size: 44/@em;
+			line-height: 50/44em;
+		}
+	}
+}
+
+/*-----------------------------------------------------------------
+[СTA]
+-----------------------------------------------------------------*/
+.cta {
+	padding: 120px 20px;
+	background-color: @yellow;
+
+	&-wrap {
+	.clearspace;
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+	}
+	&__heading {
+		position: relative;
+		line-height: normal;
+		text-align: right;
+
+		&-wrap {
+			display: inline-block;
+			background-color: @yellow;
+			position: relative;
+			z-index: 2;
+			padding-left: 24px;
+			font-weight: bold;
+			margin-bottom: 0;
+			.clearspace;
+		}
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			position: absolute;
+			top: 50%;
+			margin-top: -1px;
+			left: 0;
+		}
+		&-text {
+			display: inline-block;
+			vertical-align: baseline;
+			font-family: inherit;
+			font-weight: inherit;
+			width: 272px;
+			margin: 0;
+		}
+		&-icon {
+			display: inline-block;
+			vertical-align: baseline;
+			font-size: 124px;
+			line-height: 96%;
+			color: #fff;
+			padding-left: 16px;
+		}
+	}
+}
+.responsive-text {
+	font-family: @oswald;
+	text-transform: uppercase;
+
+	span {line-height: 100%;}
+}
+
+/*-----------------------------------------------------------------
+[Pricing]
+-----------------------------------------------------------------*/
+.pricing {
+
+	&-table {
+		background-color: #111;
+		border-width: 0; 
+		color: #fff;
+		margin-bottom: 60px;
+		overflow: hidden;
+
+		tr:first-child {
+			background-color: #000;
+		}
+		td, th {
+			border-width: 0;
+			padding: 14px 30px;
+
+			&:first-child {
+				padding-left: 60px;
+				width: 2/3*100%;
+			}
+			&:last-child {
+				text-align: right;
+				padding-right: 60px;
+			}
+		}
+		th {
+			font-family: @oswald;
+			font-size: 44/@em;
+			line-height: 48/44em;
+			font-weight: 300;
+			text-transform: uppercase;
+		}
+		td {
+			padding-top: 44px;
+			padding-bottom: 44px;
+			vertical-align: top;
+
+			&:last-child {vertical-align: middle;}
+		}
+		&__price {
+			color: #27d3ff;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 18/44em;
+
+			&:first-child {margin-left: 0;}
+
+			&_old {
+				opacity: 0.3;
+				font-size: 30/44em;
+				line-height: 32/30em;
+				position: relative;
+				padding: 0 2px;
+
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					height: 1px;
+					width: 100%;
+					top: 50%;
+					left: 0;
+					background-color: #000;
+				}
+			}
+		}
+		&__list {
+			margin-bottom: 0;
+			width: 50%;
+			float: left;
+			padding-right: 10px;
+
+			&:last-child {padding-right: 0;}
+		}
+		&_yellow {
+			background-color: #ebd800;
+			color: #000;
+
+			tr:first-child {
+				background-color: @yellow;
+			}
+			.pricing-table__price {
+				color: #000;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1679px) {
+	.services {
+
+		&-wrap {
+			margin-bottom: -56px;
+		}
+		&__item {
+			width: 50%;
+			margin-bottom: 56px;
+
+			&-img {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+	.cta {
+		padding-top: 100px;
+		padding-bottom: 100px;
+
+		&__heading {
+
+			&-text {width: 240px;}
+			&-icon {font-size: 110px;}
+		}
+	}
+}
+
+@media screen and (max-width: 1439px) {	
+	.cta {
+
+		&__heading {
+
+			&-text {width: 200px;}
+			&-icon {font-size: 92px;}
+		}
+	}
+	.pricing {
+
+		&-table {
+			margin-bottom: 40px;
+
+			th, td {
+				padding-left: 16px;
+				padding-right: 16px;
+
+				&:first-child {
+					padding-left: 40px;
+				}
+				&:last-child {
+					padding-right: 40px;
+				}
+			}
+			td {
+				padding-top: 32px;
+				padding-bottom: 32px;
+
+				&:first-child {width: auto;}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1439px) and (min-width: 992px) {
+	.pricing {
+
+		&-table {
+
+			&__list {
+				width: 100%;
+				float: none;
+
+				&:first-child {padding-right: 0;}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.services {
+
+		&-wrap {
+			margin-bottom: -48px;
+		}
+		&__item {
+			margin-bottom: 48px;
+
+			&-img {
+				width: 88px;
+				height: 88px;
+				margin-bottom: 16px;
+			}
+		}
+	}
+	.cta {
+		padding-top: 80px;
+		padding-bottom: 80px;
+
+		&__heading {
+
+			&-text {width: 180px;}
+			&-icon {font-size: 84px;}
+		}
+	}
+	.pricing {
+
+		&-table {
+
+			td {
+				padding-top: 16px;
+				padding-bottom: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.services {
+
+		&__item {
+
+			&-img {
+				width: 72px;
+				height: 72px;
+			}
+		}
+	}
+	.cta {
+		padding-top: 64px;
+		padding-bottom: 64px;
+	}
+	.pricing {
+
+		&-table {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+	.cta {
+
+		&__item {
+			width: 50%;
+		}
+	}	
+}
+
+@media screen and (max-width: 767px) {
+	.cta {
+		padding-left: 0;
+		padding-right: 0;
+
+		&__item {
+			margin-bottom: 16px;
+
+			&:last-child {margin-bottom: 0;}
+		}
+		&__heading {
+			text-align: center;
+
+			&-wrap {
+				padding: 0 16px;
+			}
+			&-text {width: 160px;}
+			&-icon {font-size: 72px;}
+		}
+	}	
+	.pricing {
+
+		&-table {
+
+			tr {
+				display: block;
+				padding: 16px 16px;
+			}
+			td, th {
+				display: block;
+				width: 100%;
+				padding: 0;
+
+				&:first-child {
+					width: 100%;
+					padding-left: 0;
+				}
+				&:last-child {
+					text-align: left;
+					padding-right: 0;
+					margin-bottom: 0;
+				}
+			}
+			td {
+				overflow: hidden;
+				margin-bottom: 8px;
+			}
+			th {
+				margin-bottom: 4px;
+			}
+			&__list {
+
+				li:first-child {margin-top: 0;}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.services {
+
+		&-wrap {
+			margin-bottom: -40px;
+		}
+		&__item {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+	.cta {
+
+		&__heading {
+			text-align: right;
+
+			&-wrap {
+				padding-right: 0;
+			}
+		}
+	}	
+	.pricing {
+
+		&-table {
+
+			&__list {
+				width: 100%;
+				float: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,132 @@
+/*-----------------------------------------------------------------
+[Page 404]
+-----------------------------------------------------------------*/
+.page-404 {
+	margin: 0;
+	display: table-cell;
+	vertical-align: middle;
+
+	&__container {
+		max-width: 1192px;
+		display: table;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__item {
+		display: table-cell;
+		vertical-align: middle;
+		float: none;
+	}
+	&__heading {
+		padding-right: 30px;
+		white-space: nowrap;
+
+		.fact {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 177px;
+			padding-right: 30px;
+			margin: 0;
+			width: auto;
+			max-width: none;
+		}
+		&-text {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0;
+			width: 100%;
+			max-width: 340px;
+		}
+	}
+	&__btn {
+		width: 324px;
+	}
+}
+.page-wrap_full-height {
+	padding-bottom: 0 !important;
+}
+.page-wrap_full-height .page-shift {
+	height: 100vh;
+	display: table;
+	width: 100%;
+	height: 100vh;
+}
+
+@media screen and (max-width: 1199px) {
+	.page-404 {
+
+		&__heading {
+
+			.fact {
+				font-size: 140px;
+			}
+			&-text {
+				max-width: 270px;
+			}
+		}
+		&__btn {
+			width: auto;
+		}
+	}
+}
+@media screen and (max-width: 991px) {
+	.page-404 {
+
+		&__heading {
+
+			.fact {
+				font-size: 100px;
+				padding-right: 15px;
+			}
+			&-text {
+				max-width: 200px;
+			}
+		}
+		&__btn {
+			width: auto;
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	.page-404 {
+
+		&__item {
+			display: block;
+			margin-bottom: 24px;
+
+			&:last-child {margin-bottom: 0;}
+		}
+		&__heading {
+			padding-right: 0;
+			text-align: center;
+
+			.fact {
+				font-size: 72px;
+			}
+			&-text {
+				max-width: 160px;
+			}
+		}
+		&__btn {
+
+			.btn {max-width: none;}
+		}
+	}
+}
+@media screen and (max-width: 479px) {
+	.page-404 {
+
+		&__heading {
+
+			.fact {
+				font-size: 104px;
+				padding-right: 0;
+			}
+			&-text {
+				display: block;
+				margin-top: 10px;
+			}
+		}
+	}
+}
