@@ -1,0 +1,3412 @@
+/*------------------------------------------------------------------
+[Main Stylesheet]
+
+Project     :  Salmond - A fresh one page HTML template
+Version     :  1.0.0
+Primary Use : Personal Portfolio
+Last change :  04/01/2018[Initial Release!]
+Updated By  :  ThemesTrace
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[Import Files]
+
+@import "animate.css";
+@import "bootstrap.min.css";
+@import "font-awesome.min.css";
+@import "jquery.fancybox.min.css";
+@import "normalize.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
+@import "reset.css";
+@import "slicknav.min.css";
+@import "styles.css";
+@import "salmond.css";
+@import "responsive.css";
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+01. Body / Typography
+    1.1 - Generic
+    1.2 - Preloader
+02. Header Area
+    2.1 - Salmond Initial Menu
+    2.2 - Salmond Sidebar Menu
+03. Banners
+    3.1 - Split Image
+    3.2 - Slider Banner
+    3.3 - Video Banner
+04. Breadcrumb
+05. Blog
+    5.1 - Unit Test CSS
+    5.2 - Ajax Loadmore
+    5.3 - Post Navigation
+    5.4 - Comment
+    5.5 - Image Post Format
+    5.6 - Link Post Format
+    5.7 - Quote Post Format
+    5.8 - Audio Post Format
+    5.9 - Video Post Format
+    5.10 - Status Post Format
+    5.11 - Chat Post Format
+    5.12 - Gallery Post Format
+06. Widgets
+    6.1 - About Widget
+    6.2 - Recent Posts
+07. Author Area
+08. Testimonial Area
+09. Portfolio Area
+10. Services Area
+11. Contact Area
+12. New Extra CSS
+13. Color Combination
+    13.1 - Dark CSS
+    13.2 - Color CSS
+14. Footer Area
+15. Preview CSS
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[Color codes]
+
+# Mid Dark: #141c24
+# Dark: #0e1319
+# Light Grey: #d1d1d1
+# Grey: #777
+# Extra Grey: #333
+# Primary Color: #FFFFFF
+# Default Color: #F1A9A0
+# */
+
+
+/*------------------------------------------------------------------
+[Typography]
+
+Body            :   15px 'Raleway', sans-serif;
+Headers         :   'Cabin', sans-serif
+Input, textarea :   15px 'Raleway', sans-serif
+Sidebar heading :   12px 'Raleway', sans-serif;
+
+-------------------------------------------------------------------*/
+
+
+/*
+01. Body / Typography
+==========================================================
+*/
+
+/*
+1.1 -- Generic
+==========================================================
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700|Cabin|Roboto:300,400,500,700,900');
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+blockquote {
+    border: transparent;
+    position: relative;
+}
+
+blockquote p {
+    font-size: 24px !important;
+    color: #333;
+    line-height: 1.5 !important;
+    font-style: normal;
+    font-family: 'Cabin', sans-serif;
+}
+
+blockquote:before {
+    content: '\f10d';
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    left: -5px;
+}
+
+.background-overlay,
+.background-overlay-black {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.background-overlay {
+    background: rgba(102, 24, 126, 0.6);
+}
+
+.background-overlay-black {
+	background: rgba( 0, 0, 0, 0.2 );
+}
+
+.pt-80 {
+	padding-top: 80px;
+}
+
+
+/*
+1.2 -- Preloader
+==========================================================
+*/
+.salmond-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #32ce2d;
+    z-index: 9999999;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+#preloader-1 {
+    background: rgba(204, 255, 0, 1) !important;
+}
+#preloader-2 {
+    background: rgba(102, 204, 0, 1) !important;
+}
+#preloader-3 {
+    background: rgba(204, 102, 204, 1) !important;
+}
+#preloader-4 {
+    background: rgba(102, 24, 126, 1) !important;
+}
+#preloader-5 {
+    background: rgba(153, 51, 204, 1) !important;
+}
+.fa-spin {
+    font-size:6em !important;
+    color: #fff;
+}
+
+#salmond-status {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+/*
+02. Header Area
+==========================================================
+*/
+
+.slicknav_menu {
+    display: none;
+}
+
+.header-area {
+	position: relative;
+}
+
+.header-top {
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+}
+
+.header-social {
+	float: right;
+}
+
+.header-social ul li a {
+	color: #fff;
+    font-size: 14px;
+    padding: 15px 0 5px;
+    display: block;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar-brand,
+.navbar-brand:active,
+.navbar-brand:focus {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #fff;
+    -webkit-transition: all .5s ease;
+       -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+         -o-transition: all .5s ease;
+            transition: all .5s ease;
+}
+
+.navbar-brand:hover {
+	color: #fff;
+}
+
+.salmond-navbar ul li {
+	position: relative;
+	margin: 0 8px;
+}
+
+.salmond-navbar ul li a {
+    font-family: 'Cabin', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.salmond-navbar ul li:before,
+.salmond-navbar ul li a.active:before {
+	position: absolute;
+	background-color: #fff;
+	content: '';
+    width: 0;
+    height: 1px;
+    border: transparent;
+    right: -5px;
+    top: 50%;
+	visibility: hidden;
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;
+}
+
+.salmond-navbar ul li:hover:before,
+.header-social ul li:hover:before,
+.salmond-navbar ul li a.active:before {
+	width: 20px;
+	visibility: visible;
+}
+
+.salmond-navbar ul li a:hover,
+.salmond-navbar ul li a:focus,
+.salmond-navbar ul li a:active {
+	background-color: transparent;
+}
+
+.title h1 {
+	font-size: 65px;
+	text-transform: capitalize;
+	line-height: 0.8em;
+}
+
+.intro-effect-fadeout.modify .header h1,
+.intro-effect-fadeout .header p {
+	color: #fff;
+}
+
+.intro-effect-fadeout .salmond-navbar {
+    text-align: left;
+    max-width: 900px;
+}
+
+.salmond-navbar {
+    z-index: 1000;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 27%;
+    left: 51%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.salmond-header-one .salmond-navbar.fixed-header {
+    top: 2%;
+    -webkit-transition-duration: 0s !important;
+    transition-duration: 0s !important;
+    -webkit-transition-delay: 0s !important;
+    transition-delay: 0s !important;
+}
+
+.header-v3 .salmond-header-one .salmond-navbar.fixed-header {
+    top: 8%;
+}
+
+.fixed-header {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color: rgba( 174, 0, 0, 0.2 );
+    z-index: 9999;
+    padding: 10px 0;
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+}
+
+.logged-in.admin-bar .header-top.fixed-header {
+    top: 32px;
+}
+
+.logged-in.admin-bar .salmond-header-one .salmond-navbar.fixed-header {
+    top: 6%;
+}
+
+.logged-in.admin-bar .header-v3 .salmond-header-one .salmond-navbar.fixed-header {
+    top: 12%;
+}
+
+.header-top.fixed-header {
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;   
+}
+
+.fixed-header.fixed-header-bg {
+	background-color: #121212;
+}
+
+
+/*
+2.1 -- Salmond Initial Menu
+==========================================================
+*/
+
+.salmond-initial-menu .navbar-header {
+    padding-bottom: 30px;
+}
+
+.salmond-initial-menu .salmond-navbar-initial {
+    background: #fff;
+    border: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 0;
+}
+
+.salmond-initial-menu .salmond-navbar-initial.fixed-header {
+    padding: 0;
+}
+
+.salmond-initial-menu .salmond-navbar-initial.fixed {
+    box-shadow: 0 12px 40px 1px rgba( 0, 0, 0, .07 );
+}
+
+.salmond-initial-menu .navbar-nav li {
+    position: relative;
+    padding: 0 5px;
+}
+
+.salmond-initial-menu .navbar-nav li.active a,
+.salmond-initial-menu .navbar-nav li.current-menu-parent a,
+.salmond-initial-menu .navbar-nav li.focus a {
+    background-color: transparent;
+    color: #ff4636;
+}
+
+.salmond-initial-menu .navbar-nav li ul.salmond-dropdown-menu li.active a {
+    color: #ff4636;
+}
+
+.salmond-initial-menu .navbar-nav li.active a:after,
+.salmond-initial-menu .navbar-nav li.focus a:after {
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    transform: translateY(-20px);
+    opacity: 1;
+}
+
+.salmond-initial-menu .navbar-nav li.active a:hover,
+.salmond-initial-menu .navbar-nav li.active a:active,
+.salmond-initial-menu .navbar-nav li.active a:focus,
+.salmond-initial-menu .navbar-nav li.focus a:hover,
+.salmond-initial-menu .navbar-nav li.focus a:active,
+.salmond-initial-menu .navbar-nav li.focus a:focus {
+    background-color: transparent;
+    color: #ff4636;
+}
+
+.salmond-initial-menu .navbar-nav li .salmond-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 5;
+    background: #fff;
+    display: none;
+}
+
+.salmond-initial-menu .navbar-nav li a {
+    color: #f5f6f1;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    padding: 30px 5px;
+    margin: 0;
+    font-weight: 500;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease;
+}
+
+.salmond-initial-menu .navbar-nav li a {
+    color: #333;
+}
+
+.salmond-initial-menu .navbar-nav li a.active {
+    color: #F1A9A0;
+}
+
+.salmond-initial-menu .navbar-default .navbar-brand,
+.salmond-initial-menu .navbar-default .navbar-brand:hover {
+    color: #333;
+    padding-top: 30px;
+    padding-left: 0;
+}
+
+.salmond-initial-menu .navbar-nav li:hover a {
+    color: #F1A9A0;
+}
+
+.salmond-initial-menu .navbar-nav li:hover > .salmond-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.salmond-initial-menu .navbar-nav li:hover ul ul {
+    margin-left: 100%;
+    top: -15px;
+}
+
+.salmond-initial-menu .navbar-nav li.dropdown-right:hover ul ul {
+    margin-left: -40px;
+    top: -15px;
+    left: -100%;
+}
+
+.salmond-initial-menu .navbar-nav li ul.salmond-dropdown-menu {
+    width: 250px;
+    left: 0;
+    padding: 20px;
+    margin-left: 0;
+    list-style: none;
+    box-shadow: 0 12px 40px 1px rgba( 0, 0, 0, .07 );
+}
+
+.salmond-initial-menu .navbar-nav li:last-child ul.salmond-dropdown-menu {
+    left: -15px;
+}
+
+.salmond-initial-menu .navbar-nav li ul.salmond-dropdown-menu li a {
+    padding: 10px;
+    display: block;
+    font-size: 13px;
+    color: #777;
+    letter-spacing: 0.02em;
+    word-spacing: 0.05em;
+    text-transform: capitalize;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease;
+}
+
+.salmond-initial-menu .navbar-nav li ul.salmond-dropdown-menu li {
+    position: relative;
+}
+
+.salmond-initial-menu .navbar-nav li ul.salmond-dropdown-menu li.menu-item-has-children:before {
+    content: "\f105";
+    font-family: FontAwesome;
+    right: 35px;
+    position: absolute;
+    top: 9px;
+    font-size: 14px;
+}
+
+.salmond-initial-menu .navbar-nav li ul.salmond-dropdown-menu li a:after {
+    background: transparent;
+    color: transparent;
+}
+
+.salmond-initial-menu .navbar-nav li ul.salmond-dropdown-menu li a:hover {
+    color: #F1A9A0;
+}
+
+.salmond-navbar.fixed-header {
+    left: 28%;
+    top: 9px;
+    background: transparent;
+}
+
+.intro-effect-side.modify .navbar-brand,
+.intro-effect-side.modify .header-social ul li a {
+    color: #121212;
+}
+
+.intro-effect-side .header-social ul li a {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.intro-effect-side .fixed-header .navbar-brand,
+.intro-effect-side .fixed-header .header-social ul li a {
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;
+}
+
+.intro-effect-side.modify .fixed-header .navbar-brand,
+.intro-effect-side.modify .fixed-header .header-social ul li a {
+    color: #fff;
+}
+
+
+/*
+2.2 -- Salmond Sidebar Menu
+==========================================================
+*/
+
+.logged-in.admin-bar .salmond-sidebar-menu {
+    top: 32px;
+}
+
+.salmond-sidebar-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #f5f5f5;
+    padding: 0 20px 0 10px;
+    height: 100%;
+    float: left;
+    width: 20%;
+}
+
+.salmond-sidebar-menu.dark {
+    background: #141c24;
+    border-right: 1px solid #0e1319;
+}
+
+.salmond-sidebar-menu.dark ul li a,
+.salmond-sidebar-menu.dark .navbar-brand,
+.dark .salmond-sidebar-menu-footer a,
+.dark .salmond-sidebar-menu-footer p {
+    color: #999;
+}
+
+.dark .navbar-default .navbar-nav>li>a:focus,
+.dark .navbar-default .navbar-nav>li>a:hover,
+.salmond-sidebar-menu.dark .navbar-nav li:hover a,
+.salmond-sidebar-menu.dark .navbar-nav li a.active,
+.color .navbar-default .navbar-nav>li>a:focus,
+.color .navbar-default .navbar-nav>li>a:hover,
+.salmond-sidebar-menu.color .navbar-nav li:hover a,
+.salmond-sidebar-menu.color .navbar-nav li a.active {
+    color: #fff;
+}
+
+
+.content-shrink {
+    width: 100%;
+    float: right;
+    /*overflow-x: hidden;*/
+    margin-bottom: -1px;
+    padding: 0px 3%;
+}
+
+.blog .content-shrink {
+    padding: 20px;
+}
+
+.salmond-sidebar-menu .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    height: 100vh;
+}
+
+.salmond-sidebar-menu .navbar-header,
+.salmond-sidebar-menu .navbar-brand {
+    float: none;
+}
+
+.salmond-sidebar-menu .navbar-header {
+    padding-top: 45px;
+}
+
+.salmond-sidebar-menu .navbar-brand {
+    font-size: 35px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #777;
+    font-family: 'Cabin', sans-serif;
+}
+
+.salmond-sidebar-menu ul li {
+    float: none;
+}
+
+.salmond-sidebar-menu .navbar-nav {
+    float: none;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-60%);
+       -moz-transform: translateY(-60%);
+        -ms-transform: translateY(-60%);
+         -o-transform: translateY(-60%);
+            transform: translateY(-60%);
+}
+
+.salmond-sidebar-menu .navbar-nav li a {
+    font-family: 'Cabin', sans-serif;
+    padding-left: 0;
+    padding-bottom: 5px;
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;
+}
+
+.salmond-sidebar-menu .navbar-nav li:hover a,
+.salmond-sidebar-menu .navbar-nav li a.active {
+    color: #121212;
+}
+
+.salmond-sidebar-menu-footer {
+    padding-left: 14px;
+    position: absolute;
+    bottom: 45px;
+}
+
+.salmond-sidebar-menu-footer a,
+.salmond-sidebar-menu-footer p {
+    color: #777;
+}
+
+
+/*
+03. Banners
+==========================================================
+*/
+
+/*
+3.1 -- Split Image
+==========================================================
+*/
+
+.banner-one-container {
+    position: relative;
+}
+
+.banner-one-container.intro-effect-side {
+    background-image: url( '../images/banner/1.jpg' );
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.banner-shape-container {
+    /*background: #0e1319;*/
+}
+
+.intro-effect-side .banner-one .bg-img::after {
+    border: 0px solid transparent;
+}
+
+.banner-one .title h5 {
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+    display: inline-block;
+    background: #F1A9A0;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    margin: 0 0 10px 0px;
+}
+
+.banner-shape-container .title h1 {
+    color: #121212;
+    width: 60%;
+}
+
+
+/*
+3.2 -- Slider Banner
+==========================================================
+*/
+
+.salmond-banner-slider {
+    position: relative;
+}
+
+.salmond-banner-slider img {
+    width: 100%;
+}
+
+.banner-slider-indicators {
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    z-index: 1;
+    list-style: none;
+    font-family: 'Cabin', sans-serif;
+    color: #fff;
+}
+
+.salmond-banner-slider .item {
+    height: 90vh;
+}
+
+.banner-slider-indicators li {
+    font-size: 14px;
+    letter-spacing: 0.07em;
+    text-indent: 0;
+    width: 20px;
+    height: 25px;
+    display: block;
+    line-height: 20px;
+    position: relative;
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;
+}
+
+.banner-slider-indicators li.active {
+    font-weight: 700;
+    font-size: 60px;
+    width: 20px;
+    height: 50px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;
+}
+
+.banner-slider-indicators li.active:after {
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background-color: #fff;
+    left: 2px;
+    top: 35px;
+    content: '';
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;
+}
+
+.salmond-banner-slider ul li,
+.salmond-banner-slider ul li.active {
+    border: transparent;
+    background: transparent;
+    border-radius: 0;
+}
+
+.salmond-banner-slider .carousel-caption {
+    left: 110px;
+    width: 38%;
+    text-align: left;
+    bottom: -50px;
+}
+
+.salmond-banner-slider .carousel-caption h2 {
+    text-transform: uppercase;
+    font-size: 58px;
+    text-shadow: none;
+    font-family: 'Cabin', sans-serif;
+    line-height: 1.3;
+    letter-spacing: 0.05em;
+}
+
+
+/*
+3.3 -- Video Banner
+==========================================================
+*/
+
+.salmond-video-background,
+.banner-left-area {
+    position: relative;
+    height: 93vh;
+    overflow: hidden;
+}
+
+.salmond-video-background.video-alt {
+    overflow-x: hidden;
+    height: auto;
+}
+
+.salmond-video-background video { 
+    position: absolute;
+    top: 0;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-1%);
+    background: url('../images/slider/3.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+
+.banner-left {
+    color: #fff;
+    position: relative;
+    width: 60%;
+    top: 50%;
+    left: 10%;
+    font-family: 'Cabin', sans-serif;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.watch-story {
+    margin-top: 25px;
+}
+
+.watch-story i {
+    font-size: 14px;
+    background: #F1A9A0;
+    color: #fff;
+    padding-top: 19px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    border: 9px solid rgba( 255, 255, 255, 0.3 );
+}
+
+.watch-story a {
+    text-decoration: none;
+    color: #fff;
+    outline: 0;
+}
+
+.watch-story span {
+    opacity: 0;
+    visibility: hidden;
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-left: -15px;
+    letter-spacing: 0.07em;
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;
+}
+
+.watch-story a:hover span {
+    opacity: 1;
+    visibility: visible;
+    margin-left: 5px;
+}
+
+.banner-about-social li a {
+    color: #fff;
+}
+
+.banner-about-intro {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.salmond-parallax-background {
+    background-image: url( '../images/slider/3.jpg' );
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.salmond-parallax-background:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    content: '';
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    -webkit-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+}
+
+
+
+/*
+04. Breadcrumb
+==========================================================
+*/
+
+.breadcrumb {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    font-family: 'Cabin', sans-serif;
+}
+
+.breadcrumb>li+li:before {
+    padding: 0 15px;
+    color: #fff;
+    content: "\f105";
+    font-family: FontAwesome;
+}
+
+.header .title .breadcrumb li a {
+    text-decoration: none;
+}
+
+.header .title .breadcrumb li span {
+    color: #fff;
+}
+
+.header .title .breadcrumb li a,
+.header .title .breadcrumb li span {
+    font-size: 16px;
+}
+
+
+/*
+05. Blog
+==========================================================
+*/
+.salmond-blog-posts article {
+	border: 1px solid #ededed;
+	padding: 40px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.entry-thumbnail {
+    margin-top: 15px;
+}
+
+.entry-title {
+    font-size: 25px;
+    margin-bottom: 5px;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 400;
+    margin-top: 0;
+}
+
+.entry-title a {
+	text-decoration: none;
+	color: #333;
+}
+
+.posted-on,
+.byline,
+.cat-links,
+.tags-links {
+    position: relative;
+}
+
+.posted-on {
+    margin-left: 16px;
+}
+
+.byline {
+    margin-left: 20px;
+}
+
+.tags-links {
+    margin-left: 30px;
+}
+
+.posted-on:before,
+.byline:before,
+.cat-links:before,
+.tags-links:before {
+    position: absolute;
+    left: -15px;
+    top: -1px;
+    font-size: 13px;
+    font-family: FontAwesome;
+}
+
+.posted-on:before {
+    content: '\f017';
+}
+
+.byline:before {
+    content: '\f2c0';
+}
+
+.cat-links:before {
+    content: '\f115';
+    left: 0;
+}
+
+.cat-links a:first-child {
+    padding-left: 20px;
+}
+
+.tags-links:before {
+    content: '\f02b';
+    left: -18px;
+}
+
+.posted-on a,
+.byline a,
+.cat-links a,
+.comments-link a,
+.tags-links a {
+	text-decoration: none;
+    text-transform: capitalize;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease;
+}
+
+.posted-on a {
+    margin-left: 5px;
+}
+
+.entry-meta,
+.entry-footer,
+.entry-meta .like {
+	font-family: 'Cabin', sans-serif;
+	font-size: 14px;
+}
+
+.posted-on,
+.cat-links {
+	margin-right: 5px;	
+}
+
+.entry-meta .like {
+    margin-left: 7px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.entry-meta .post-views {
+    margin-left: 8px;
+}
+
+.entry-meta .like .fa-heart {
+    color: #F1A9A0;
+}
+
+.byline {
+	text-transform: capitalize;
+}
+
+.entry-content {
+	margin-top: 10px;
+}
+
+.entry-content p {
+	font-size: 14px;
+	font-weight: 500;
+    line-height: 2.3;
+    margin-bottom: 30px;
+}
+
+.read-more {
+    margin: 0 0 10px;
+    display: inline-block;
+}
+
+.read-more a {
+    color: #333;
+    font-family: 'Cabin', sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    position: relative;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease;
+}
+
+.read-more a:before {
+    position: absolute;
+    content: '';
+    background: #333;
+    width: 0;
+    height: 1px;
+    right: -15px;
+    top: 50%;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease;
+}
+
+.read-more a:hover {
+    padding-left: 10px;
+}
+
+.read-more a:hover:before {
+    width: 30px;
+}
+
+.comments-link {
+	float: right;
+    font-family: 'Cabin', sans-serif;
+}
+
+.edit-link {
+	display: block;
+	padding-top: 25px;
+}
+
+.entry-footer {
+	margin-top: 15px;
+    overflow: hidden;
+}
+
+/*
+5.1 -- Unit Test CSS
+==========================================================
+*/
+.salmond-blog-posts article.sticky {
+    border: transparent;
+    background: #F1A9A0;
+    color: #fff;
+}
+
+.salmond-blog-posts article.sticky h2 a,
+.salmond-blog-posts article.sticky .posted-on a,
+.salmond-blog-posts article.sticky .byline a,
+.salmond-blog-posts article.sticky .cat-links a,
+.salmond-blog-posts article.sticky .tags-links a,
+.salmond-blog-posts article.sticky .edit-link a {
+    color: #fff;
+}
+
+.salmond-blog-posts article.sticky .read-more a {
+    background: #fff;
+    color: #F1A9A0;
+}
+
+.salmond-blog-posts article.sticky .read-more a:before {
+    border: transparent;
+}
+
+.widget h5 {
+    margin-top: 0;
+}
+
+.widget_calendar table {
+    margin-bottom: 0;
+}
+
+.rsswidget {
+    color: #F1A9A0;
+}
+
+.tagcloud a {
+    margin-right: 5px;
+}
+
+/*
+5.2 -- AJAX loadmore
+==========================================================
+*/
+.salmond_loadmore {
+    cursor: pointer;
+    margin-bottom: 30px;
+    display: inline-block;
+    color: #333;
+    font-family: 'Cabin', sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    position: relative;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease;
+}
+
+.salmond_loadmore:before {
+    position: absolute;
+    content: '';
+    background: #333;
+    width: 0;
+    height: 1px;
+    right: -15px;
+    top: 50%;
+    -webkit-transition: all 320ms ease;
+    -moz-transition: all 320ms ease;
+    -ms-transition: all 320ms ease;
+    -o-transition: all 320ms ease;
+    transition: all 320ms ease;
+}
+
+.salmond_loadmore:hover {
+    padding-left: 10px;
+}
+
+.salmond_loadmore:hover:before {
+    width: 30px;
+}
+
+/*
+5.3 -- Post Navigation
+==========================================================
+*/
+.post-navigation {
+    overflow: hidden;
+}
+
+.nav-previous a,
+.nav-next a {
+    position: relative;
+    color: #F1A9A0;
+    -webkit-transition: all .35s ease;
+       -moz-transition: all .35s ease;
+        -ms-transition: all .35s ease;
+         -o-transition: all .35s ease;
+            transition: all .35s ease;
+}
+
+.nav-previous a:before,
+.nav-next a:before {
+    position: absolute;
+    font-family: FontAwesome;
+    top: -3px;
+    opacity: 0;
+    color: #F1A9A0;
+    -webkit-transition: all .35s ease;
+       -moz-transition: all .35s ease;
+        -ms-transition: all .35s ease;
+         -o-transition: all .35s ease;
+            transition: all .35s ease;
+}
+
+.nav-previous a:before {
+    content: '\f048';
+    left: 10px;
+}
+
+.nav-next a:before {
+    content: '\f051';
+    right: 10px;
+}
+
+.nav-previous a:hover:before,
+.nav-next a:hover:before {
+    opacity: 1;
+}
+
+.nav-previous a:hover:before {
+    left: -20px;
+}
+
+.nav-next a:hover:before {
+    right: -20px;
+}
+
+.nav-previous a:hover {
+    margin-left: 25px;
+}
+
+.nav-next a:hover {
+    margin-right: 20px;
+}
+
+/*
+5.4 -- Comment
+==========================================================
+*/
+.comments-area {
+    padding-top: 40px;
+}
+
+.comment-list {
+    padding-bottom: 30px;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+.comment-item {
+    list-style: none;
+}
+
+.comment-list ol {
+    list-style: none;
+}
+
+.comments-title {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 10px;
+    letter-spacing: 0.03em;
+}
+
+.comment-author {
+    display: inline-block;
+}
+
+.comment-author a {
+    color: #333;
+    text-decoration: none;
+}
+
+.comment-meta {
+    float: left;
+    width: 10%;
+}
+
+.comments-area .comment-list .comment-body {
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.comments-area .comment-list .content {
+    padding: 0;
+}
+
+.comments-area .comment-list .edit-link {
+    margin-top: 0;
+}
+
+.comment-content {
+    float: left;
+    width: 85%;
+    margin-left: 5%;
+}
+
+.comment-content h4.comment-title {
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.edit-link {
+    float: left;
+}
+
+.comment-reply-link {
+    float: right;
+}
+
+.comment-metadata {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea,
+.contact-form form input[type="text"],
+.contact-form form input[type="email"],
+.contact-form form input[type="url"],
+.contact-form form textarea {
+    background: transparent;
+    border: 1px solid #ededed;
+    border-radius: 25px;
+    padding: 15px 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.comment-form input[type="text"]:focus,
+.comment-form input[type="email"]:focus,
+.comment-form input[type="url"]:focus,
+.comment-form textarea:focus {
+    border: 1px solid #ededed;
+}
+
+.comment-form-author {
+    float: left;
+    width: 49%;
+    margin-right: .5%;
+}
+
+.comment-form-email {
+    float: left;
+    width: 49%;
+    margin-left: 1.5%;
+}
+
+.form-submit input[type="submit"] {
+    background: #F1A9A0;
+    padding: 20px 40px;
+    border-radius: 50px;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+}
+
+.comment-reply-title,
+.comment-notes,
+.comment-form label {
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: 10px;
+}
+
+.comment-reply-title {
+    border-bottom: 1px solid #ededed;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.comment-notes {
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.comment-form label {
+    padding-bottom: 0;
+}
+
+
+/*
+5.5 -- Image Post Format
+==========================================================
+*/
+
+.salmond-format-image .entry-thumbnail {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/*
+5.6 -- Link Post Format
+==========================================================
+*/
+
+.salmond-blog-posts .salmond-format-link {
+    padding: 50px 5px;
+}
+
+.salmond-format-link .entry-title {
+    line-height: 1.8;
+}
+
+.salmond-format-link .entry-title a {
+    display: block;
+}
+
+.salmond-format-link .link-icon {
+    background: #F1A9A0;
+    color: #fff;
+    padding-top: 18px;
+    border-radius: 50%;
+    font-size: 16px;
+    width: 60px;
+    height: 60px;
+    margin: 20px auto 0;
+    display: block;
+}
+
+@keyframes salmond-ripple-out-radius {
+    100% {
+        top: -12px;
+        right: -12px;
+        bottom: -12px;
+        left: -12px;
+        opacity: 0;
+    }
+}
+.salmond-ripple-out-radius {
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+}
+.salmond-ripple-out-radius:before {
+    content: '';
+    position: absolute;
+    border: #F1A9A0 solid 6px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    -webkit-animation-duration: 1.3s;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+.salmond-format-link:hover .salmond-ripple-out-radius:before, .salmond-format-link:focus .salmond-ripple-out-radius:before, .salmond-format-link:active .salmond-ripple-out-radius:before {
+    -webkit-animation-name: salmond-ripple-out;
+    animation-name: salmond-ripple-out;
+}
+
+
+/*
+5.7 -- Quote Post Format
+==========================================================
+*/
+
+.salmond-blog-posts .salmond-format-quote {
+    padding: 50px;
+    background: #121212;
+}
+
+.quote-content {
+    position: relative;
+    font-size: 25px;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.quote-content a,
+.salmond-format-quote .entry-footer a,
+.salmond-format-quote .tags-links:before,
+.salmond-format-quote .cat-links:before {
+    text-decoration: none;
+    color: #fff;
+}
+
+.quote-content:before {
+    position: absolute;
+    font-family: FontAwesome;
+    font-size: 15px;
+    color: #fff;
+    content: "\f10d";
+    left: -23px;
+    top: 2px;
+}
+
+.content-author {
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 25px;
+    position: relative;
+    color: #fff;
+}
+
+.content-author:before {
+    content: "-";
+    position: absolute;
+    right: 120px;
+    top: -1px;
+}
+
+/*
+5.8 -- Audio Post Format
+==========================================================
+*/
+
+.salmond-format-audio .entry-content iframe {
+    width: 100%;
+    height: 166px;
+    border: none;
+}
+
+/*
+5.9 -- Video Post Format
+==========================================================
+*/
+
+.salmond-format-video .entry-content iframe {
+    width: 100%;
+    height: 260px;
+    border: none;
+}
+
+/*
+5.10 -- Status Post Format
+==========================================================
+*/
+
+.salmond-blog-posts .salmond-format-status {
+    padding: 50px;
+}
+
+.salmond-format-status .entry-header {
+    overflow: hidden;
+}
+
+.salmond-format-status .entry-title {
+    float: left;
+    margin-right: 15px;
+}
+
+.salmond-format-status .entry-meta {
+    margin-top: 5px;
+    float: left;
+}
+
+.salmond-format-status .entry-content {
+    clear: left;
+}
+
+/*
+5.11 -- Chat Post Format
+==========================================================
+*/
+.salmond-format-chat .entry-content p:nth-child(odd) {
+    background: #f5f5f5;
+    padding: 10px 8px;
+}
+
+.salmond-format-chat .entry-content p {
+    margin-bottom: 5px;
+}
+
+/*
+5.12 -- Gallery Post Format
+==========================================================
+*/
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
+    top: 50%;
+    bottom: 50%;
+}
+
+.salmond-format-gallery .carousel {
+    margin-top: 15px;
+}
+
+.salmond-format-gallery .carousel-caption {
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    background: rgba( 241, 169, 160, 0.4 );
+    padding-bottom: 15px;
+    padding-top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
+.salmond-format-gallery .carousel-caption p {
+    margin-bottom: 0;
+    color: #fff;
+    position: relative;
+    top: 35px;
+    -webkit-transition-delay: .6s;
+    transition-delay: .6s;
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
+.salmond-format-gallery .item:hover .carousel-caption {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0;
+}
+
+.salmond-format-gallery .item:hover .carousel-caption p {
+    top: 0;
+}
+
+/*
+06. Widgets
+==========================================================
+*/
+
+.widget {
+	border: 1px solid #ededed;
+	padding: 30px;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.widget h5 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.widget.widget_search {
+	border: transparent;
+	padding: 0;
+}
+
+.search-form {
+	position: relative;
+}
+
+.search-form input.search-field {
+	font-family: 'Cabin', sans-serif;
+	float: left;
+    width: 100%;
+    display: block;
+	border: 1px solid #ededed;
+	background-color: transparent;
+	padding: 15px 10px;
+	font-size: 14px;
+}
+
+.search-submit {
+	position: absolute;
+    top: 5px;
+    right: 0;
+    background: transparent;
+    color: #ededed;
+    font-size: 14px;
+}
+
+.search-submit:hover,
+.search-submit:active,
+.search-submit:focus {
+    background: transparent;
+}
+
+/*
+6.1 -- About Widget
+==========================================================
+*/
+.about-widget-des {
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+}
+
+.about-social-profile {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-social-profile a {
+    color: #4c4c4c;
+    margin: 0 4px;
+}
+
+.about-signature img {
+    display: block;
+    margin: 0 auto;
+}
+
+/*
+6.2 -- Recent Posts
+==========================================================
+*/
+
+.single-recent-post {
+    margin-bottom: 13px;
+    overflow: hidden;
+}
+
+.single-recent-post:last-child {
+    margin-bottom: 0;
+}
+
+.recent-post-thumbnail {
+    margin-bottom: 10px;
+}
+
+.recent-post-content h4,
+.post-carousel-content h4 {
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.recent-post-content .posted-on,
+.recent-post-content .byline,
+.recent-post-content h4,
+.post-carousel-content h4,
+.post-carousel-content .posted-on {
+    font-family: 'Cabin', sans-serif;
+}
+
+.post-slider-thumbnail {
+    margin-bottom: 10px;
+}
+
+.carousel-control .left-nav,
+.carousel-control .right-nav {
+    position: absolute;
+    content: '';
+    background: #333;
+    width: 0;
+    height: 1px;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;
+}
+
+.carousel-control .left-nav {
+    left: -20px;
+}
+
+.carousel-control .right-nav {
+    right: -20px;
+}
+
+.widget_salmond_posts_carousel:hover .carousel-control .left-nav,
+.widget_salmond_posts_carousel:hover .carousel-control .right-nav {
+    opacity: 1;
+    width: 30px;
+}
+
+
+/*
+07. Author Area
+==========================================================
+*/
+.salmond-author-area {
+    padding: 120px 0 50px;
+    position: relative;
+    clear: left;
+    overflow: hidden;
+}
+
+.salmond-author-area.shape {
+    background-color: #f5f5f5;
+}
+
+.salmond-author-area:before {
+    width: 100%;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    border-top: 40px solid #fff;
+    border-left: 2000px solid #f5f5f5;
+}
+
+.salmond-author-area.shape:before {
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+}
+
+.salmond-author-area .owl-item {
+    float: left;
+}
+
+.salmond-author-area .owl-prev,
+.salmond-author-area .owl-next {
+    display: inline-block;
+    background: #ededed;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 5px;
+    border-radius: 50%;
+    padding-top: 6px;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    bottom: 0;
+    left: 40px;
+}
+
+.salmond-author-area.author-alt .owl-prev,
+.salmond-author-area.author-alt .owl-next {
+    left: 130px;
+}
+
+.author-image {
+    border: 1px solid #ededed;
+    padding: 30px;
+    position: relative;
+}
+
+.author-image:before {
+    top: 45px;
+    left: -1px;
+}
+
+.author-image:after {
+    bottom: 145px;
+    right: -1px;
+}
+
+.author-details {
+    margin-left: 20px;
+}
+
+.author-social-link {
+    margin-right: 20px;
+}
+
+.author-details,
+.author-social-link {
+    background: #fff;
+    border: 1px solid #ededed;
+    padding: 60px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 2px;
+}
+
+.author-social-link {
+    margin-top: 200px;
+}
+
+.author-details:after {
+    right: -1px;
+    top: 25px;
+}
+
+.author-social-link:after {
+    left: -1px;
+    top: 30px;
+}
+
+.author-details:after,
+.author-social-link:after,
+.author-image:before,
+.author-image:after {
+    position: absolute;
+    width: 1px;
+    background: #fff;
+    content: '';
+    height: 100px;
+}
+
+.shape .author-details:after,
+.shape .author-social-link:after,
+.shape .author-image:before,
+.shape .author-image:after {
+    background: transparent;
+}
+
+.author-details h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.author-details h3,
+.author-details p {
+    font-family: 'Cabin', sans-serif;
+}
+
+.author-details p {
+    color: #777;
+    margin-bottom: 0;
+}
+
+.author-social-link h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Cabin', sans-serif;
+}
+
+.author-social-link h4,
+.author-social-link ul li a {
+    color: #777;
+}
+
+
+
+/*
+08. Testimonial Area
+==========================================================
+*/
+.testimonial-item {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 45px 0;
+    border-left: 1px solid #ededed;
+}
+
+.testimonial-details {
+    padding: 35px 30px;
+    width: 80%;
+    color: #333;
+    margin-left: -40%;
+    position: relative;
+}
+
+.testimonial-details h2 {
+    font-size: 43px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.testimonial-details p {
+    font-family: 'Cabin', sans-serif;
+    padding: 10px;
+    margin-bottom: 0;
+    background: #fff;
+}
+
+
+
+/*
+09. Portfolio Area
+==========================================================
+*/
+
+.portfolio-nav {
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.portfolio-nav ul li {
+    position: relative;
+    cursor: pointer;
+    margin-right: 15px;
+    font-family: 'Cabin', sans-serif;
+}
+
+.portfolio-nav ul li:before,
+.portfolio-nav ul li.active:before {
+    position: absolute;
+    content: '';
+    background: #333;
+    width: 0;
+    height: 1px;
+    right: -5px;
+    top: 50%;
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;
+}
+
+.portfolio-nav ul li:hover:before,
+.portfolio-nav ul li.active:before {
+    width: 20px;
+}
+
+
+/*
+10. Services Area
+==========================================================
+*/
+
+.salmond-services-area.shape:after {
+    display: none;
+}
+
+.salmond-service i {
+    font-size: 35px;
+    color: #777;
+    border-bottom: 1px solid #777;
+    padding-bottom: 15px;
+}
+
+.salmond-service h4 {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Cabin', sans-serif;
+    width: 35%;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.salmond-service h4:first-letter {
+    font-size: 40px;
+}
+
+.salmond-service-two {
+    padding-top: 40px;
+}
+
+.salmond-service-two i {
+    font-size: 20px;
+    color: #333;
+    float: left;
+    width: 10%;
+    margin-right: 5%;
+}
+
+.dark .salmond-service-two i,
+.dark .salmond-service-two h4 {
+    color: #FFF;
+}
+
+.dark .salmond-service-two p {
+    color: #777;
+}
+
+.salmond-service-details {
+    float: left;
+    width: 85%;
+}
+
+.salmond-service-two h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: 0.03em;
+}
+
+.salmond-service-details p {
+    font-family: 'Cabin', sans-serif;
+}
+
+
+
+
+/*
+11. Contact Area
+==========================================================
+*/
+.salmond-contact-area {
+    position: relative;
+    padding: 80px 0;
+}
+
+.contact-form-details {
+    padding: 0px 40px;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    height: auto;
+    border: 1px solid #f5f5f5;
+    margin: 0 40px;
+}
+
+.contact-form-details {
+    /*margin-top: 80px;*/
+}
+
+.contact-form-details .comment-notes {
+    margin-bottom: 10px;
+}
+
+.contact-form-details .comment-reply-title {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.contact-form-details .comment-notes {
+    line-height: 2.1;
+}
+
+
+
+
+/*
+12. New Extra CSS
+==========================================================
+*/
+.caption-heading {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.top-margin {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.salmond-services-area {
+    padding: 80px 40px 60px;
+    position: relative;
+}
+
+.salmond-services-area.shape {
+    background-color: #f5f5f5;
+}
+
+./*salmond-services-area:after {
+    width: 100%;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    border-top: 40px solid #f5f5f5;
+    border-left: 1100px solid #fff;
+}*/
+
+.salmond-services-area.shape:after {
+    border-top: 0px solid  transparent;
+    border-left: 0px solid transparent;
+}
+
+.section-heading h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.section-heading p {
+    font-family: 'Cabin', sans-serif;
+}
+
+.salmond-service {
+    margin-bottom: 70px;
+}
+
+.portfolio-area {
+    padding: 80px 0;
+    background-position: center center;
+    position: relative;
+}
+
+.portfolio-nav,
+.portfolio-content {
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio-area .grids {
+    margin-bottom: 30px;
+}
+
+.salmond-testimonial-area {
+    padding: 150px 0 130px;
+    position: relative;
+    overflow: hidden;
+}
+
+.salmond-testimonial-area.shape {
+    background-color: #f5f5f5;
+}
+
+.salmond-testimonial-area.shape:after {
+    display: none;
+}
+
+.salmond-testimonial-area:before {
+    width: 100%;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    border-top: 60px solid #fff;
+    border-left: 2000px solid #f5f5f5;
+}
+
+.salmond-testimonial-area:after {
+    width: 100%;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    border-top: 40px solid #f5f5f5;
+    border-left: 1100px solid #fff;
+}
+
+.salmond-testimonial-area.shape:before,
+.salmond-testimonial-area.shape:after {
+    border: transparent;
+}
+
+.testimonial-container .owl-item {
+    float: left;
+}
+
+.testimonial-container .owl-nav {
+    display: none;
+}
+
+.testimonial-container .owl-dots {
+    position: relative;
+    left: 90%;
+}
+
+.testimonial-container .owl-dot {
+    background: #777;
+    width: 7px;
+    height: 7px;
+    margin-left: 5px;
+    float: left;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.salmond-blog-area {
+    padding: 120px 20px 25px;
+    position: relative;
+}
+
+.salmond-blog-area:before {
+    width: 100%;
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    border-top: 40px solid #f5f5f5;
+    border-left: 1100px solid #fff;
+}
+
+.salmond-blog-area.shape:before {
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+}
+
+
+/*
+13. Color Combination
+==========================================================
+*/
+
+/*
+13.1 -- Dark CSS
+==========================================================
+*/
+.dark .intro-effect-side .bg-img::before,
+.intro-effect-side.dark .bg-img::before {
+    background: #202c3a;
+}
+
+.dark .salmond-services-area,
+.dark .salmond-author-area,
+.salmond-services-area.dark,
+.salmond-author-area.dark {
+    background: #141c24;
+    padding: 80px 40px 55px;
+}
+
+.dark .salmond-author-area,
+.salmond-author-area.dark {
+    background: #141c24;
+    padding: 80px 0 45px;
+}
+
+.dark .salmond-service i,
+.dark .salmond-service h4,
+.dark .section-heading,
+.dark .portfolio-nav ul li,
+.dark .testimonial-details h2,
+.dark .testimonial-details p,
+.dark .salmond-blog-area a,
+.dark .contact-form-details .comment-reply-title,
+.dark .contact-form-details .comment-notes,
+.dark .about-widget-des,
+.dark .entry-title a,
+.dark .posted-on a,
+.dark .byline a,
+.dark .cat-links a,
+.dark .comments-link a,
+.dark .tags-links a,
+.dark .read-more a,
+.dark .entry-content p,
+.dark .widget h5,
+.dark .about-social-profile a,
+.dark .recent-post-content a,
+.dark .widget li a,
+.dark .footer a,
+.dark .footer p,
+.dark .salmond_loadmore,
+.dark .post-carousel-content a,
+.dark .caption-heading,
+.dark .comment-title a,
+.dark .content p,
+.dark .comment-metadata,
+.dark .comment-reply-link,
+.dark .comment-content h4.comment-title,
+.dark .comments-title,
+.dark .comment-form label,
+.dark .entry-meta span,
+.dark .entry-meta span a,
+.dark .author-details h3,
+.dark .author-details p,
+.dark .author-social-link h4,
+.dark .author-social-link ul li a,
+.dark .header-v3 .header-top .navbar-brand,
+.intro-effect-side.dark .header-social li a,
+.intro-effect-side.dark.modify .header-social li a {
+    color: #d1d1d1;
+}
+
+.dark .widget,
+.widget.dark {
+    border: 1px solid #202c3a;
+}
+
+.dark .portfolio-nav ul li:before,
+.dark .portfolio-nav ul li.active:before {
+    background: #f5f5f5;
+}
+
+.dark .portfolio-area,
+.portfolio-area.dark {
+    background: #0e1319;
+}
+
+.dark .salmond-author-area:before,
+.dark .salmond-services-area:after,
+.dark .salmond-blog-area:before,
+.dark .salmond-testimonial-area:before,
+.dark .salmond-testimonial-area:after,
+.salmond-author-area.dark:before,
+.salmond-services-area.dark:after,
+.salmond-blog-area.dark:before,
+.salmond-testimonial-area.dark:before,
+.salmond-testimonial-area.dark:after {
+    border: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    right: 0;
+    left: 0;
+}
+
+.dark .salmond-services-area:after,
+.dark .salmond-testimonial-area:after,
+.salmond-services-area.dark:after,
+.salmond-testimonial-area.dark:after {
+    top: 100%;
+    background: #0e1319;
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+    -webkit-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+.dark .salmond-author-area:before,
+.dark .salmond-blog-area:before
+.salmond-author-area.dark:before,
+.salmond-blog-area.dark:before {
+    top: 0;
+    background: #141c24;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left;
+    -webkit-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+}
+
+.dark .salmond-blog-area:before,
+.salmond-blog-area.dark:before {
+    background: #0e1319;
+}
+
+.dark .salmond-testimonial-area:before,
+.salmond-testimonial-area.dark:before {
+    top: 0;
+    background: #141c24;
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+    -webkit-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+.dark .author-image,
+.author-image.dark {
+    border: 1px solid #0e1319;
+}
+
+.dark .author-details:after,
+.dark .author-social-link:after,
+.dark .author-image:before,
+.dark .author-image:after,
+.author-details.dark:after,
+.author-social-link.dark:after,
+.author-image.dark:before,
+.author-image.dark:after {
+    background: #0e1319;
+    top: 0;
+}
+
+.dark .salmond-blog-area,
+.salmond-blog-area.dark {
+    background: #0e1319;
+    padding: 80px 20px 55px;
+}
+
+.dark .posted-on:before,
+.dark .byline:before,
+.dark .cat-links:before,
+.dark .tags-links:before,
+.posted-on.dark:before,
+.byline.dark:before,
+.cat-links.dark:before,
+.tags-links.dark:before {
+    color: #d1d1d1;
+}
+
+.dark .salmond-blog-posts article,
+.salmond-blog-posts.dark article {
+    border: 1px solid #202c3a;
+}
+
+.dark .salmond-testimonial-area,
+.salmond-testimonial-area.dark {
+    background: #141c24;
+    padding: 80px 0 115px;
+}
+
+.dark .testimonial-details p,
+.testimonial-details.dark p {
+    background: #0e1319;
+}
+
+.dark .testimonial-item,
+.testimonial-item.dark {
+    border-left: 1px solid #0e1319;
+}
+
+.dark .salmond-contact-area,
+.salmond-contact-area.dark {
+    background: #0e1319;
+}
+
+.back-to-top.dark a {
+    color: #fff;
+}
+
+.dark .salmond-video-background,
+.dark .banner-left-area,
+.color .salmond-video-background,
+.color .banner-left-area {
+    height: 100vh;
+    margin-bottom: -8px;
+}
+
+.salmond-video-background.dark,
+.salmond-video-background.color {
+    margin-bottom: -8px;
+}
+
+.dark .banner-about-intro,
+.banner-about-intro.dark {
+    background: #141c24;
+}
+
+.dark .salmond-parallax-background:before,
+.salmond-parallax-background.dark:before {
+    background: #141c24;
+}
+
+.blog .content-shrink.dark {
+    background: #0e1319;
+}
+
+.blog .content-area.dark {
+    background: #0e1319;
+}
+
+.dark .salmond-format-chat .entry-content p:nth-child(odd) {
+    background: #141c24;
+}
+
+.dark .footer-area,
+.footer-area.dark {
+    border-top: 1px solid #141c24;
+    background: #0e1319;
+    margin-top: 0;
+}
+
+.dark .comments-title,
+.dark .comment-reply-title {
+    border-bottom: 1px solid #202c3a;
+}
+
+.dark .comment-form input[type="text"],
+.dark .comment-form input[type="email"],
+.dark .comment-form input[type="url"],
+.dark .comment-form textarea,
+.dark .contact-form form input[type="text"],
+.dark .contact-form form input[type="email"],
+.dark .contact-form form input[type="url"],
+.dark .contact-form form textarea {
+    border: 1px solid #202c3a;
+    color: #d1d1d1;
+}
+
+.salmond-initial-menu.dark .salmond-navbar-initial {
+    background: #141c24;
+    border-bottom: 1px solid #0e1319;
+}
+
+.salmond-initial-menu.dark .navbar-default .navbar-brand,
+.salmond-initial-menu.dark .navbar-default .navbar-brand:hover,
+.salmond-initial-menu.dark .navbar-nav li a {
+    color: #d1d1d1;
+}
+
+.salmond-initial-menu.dark .navbar-nav li a.active {
+    color: #F1A9A0;
+}
+
+.dark .salmond-author-area .owl-prev,
+.dark .salmond-author-area .owl-next,
+.dark .testimonial-details p,
+.salmond-author-area.dark .owl-prev,
+.salmond-author-area.dark .owl-next {
+    background: #202c3a;
+    color: #d1d1d1;
+}
+
+
+.intro-effect-fadeout.modify .content-area.dark > div.container:not(.title),
+.content-area.dark {
+    background: #141c24;
+    z-index: 1;
+    position: relative;
+}
+
+.dark .header-v3 .header-top {
+    background: #141c24;
+    padding: 10px;
+}
+
+.intro-effect-side.dark .header-v3 .bg-img::after,
+.intro-effect-side.color .header-v3 .bg-img::after {
+    border: 80px solid #141c24;
+}
+
+/*
+13.2 -- Color CSS
+==========================================================
+*/
+
+.salmond-sidebar-menu.color {
+    border-right: 1px solid #0e1319;
+    background-image: url( '../images/banner/1.jpg' );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.salmond-sidebar-menu.color .navbar-nav li a,
+.salmond-sidebar-menu.color .navbar-brand,
+.color .salmond-sidebar-menu-footer a,
+.color .salmond-sidebar-menu-footer p,
+.color .salmond-service i,
+.color .salmond-service h4,
+.color .section-heading,
+.color .testimonial-details h2,
+.color .testimonial-details p,
+.color .salmond-blog-area a,
+.color .contact-form-details .comment-reply-title,
+.color .contact-form-details .comment-notes,
+.color .about-widget-des,
+.color .entry-title a,
+.color .posted-on a,
+.color .byline a,
+.color .cat-links a,
+.color .comments-link a,
+.color .tags-links a,
+.color .read-more a,
+.color .entry-content p,
+.color .widget h5,
+.color .about-social-profile a,
+.color .recent-post-content a,
+.color .widget li a,
+.color .footer a,
+.color .footer p,
+.color .salmond_loadmore,
+.color .post-carousel-content a,
+.color .caption-heading,
+.color .comment-title a,
+.color .content p,
+.color .comment-metadata,
+.color .comment-reply-link,
+.color .comment-content h4.comment-title,
+.color .comments-title,
+.color .comment-form label,
+.color .entry-meta span,
+.color .entry-meta span a,
+.color .author-details h3,
+.color .author-details p,
+.color .author-social-link h4,
+.color .author-social-link ul li a,
+.color .portfolio-nav ul li,
+.color .entry-footer span,
+.color .entry-footer span a,
+.color .recent-post-content span,
+.color .comment-reply-title,
+.color .comment-notes,
+.color .comment-form label,
+.color.salmond-initial-menu .navbar-nav li a,
+.color.salmond-initial-menu .navbar-default .navbar-brand,
+.color.salmond-initial-menu .navbar-default .navbar-brand:hover,
+.color .header-v3 .header-top .navbar-brand,
+.intro-effect-side.color .header-social li a,
+.intro-effect-side.color.modify .header-social li a {
+    color: #d1d1d1;
+}
+
+.color.salmond-initial-menu .navbar-nav li a.active {
+    color: #fff;
+}
+
+.color .portfolio-nav ul li:before,
+.color .portfolio-nav ul li.active:before {
+    background: #f5f5f5;
+}
+
+.color .intro-effect-side .bg-img::before,
+.color.intro-effect-side .bg-img::before {
+    background: #67B26F;
+    background: -webkit-linear-gradient(to bottom, #4ca2cd, #67B26F);
+    background: linear-gradient(to bottom, #4ca2cd, #67B26F);
+}
+
+.color .salmond-services-area,
+.color.salmond-services-area {
+    background: #C33764;
+    background: -webkit-linear-gradient( to bottom, #1D2671, #C33764 );
+    background: linear-gradient( to bottom, #1D2671, #C33764 );
+}
+
+.color .salmond-author-area,
+.color.salmond-author-area {
+    background: #C33764;
+    background: -webkit-linear-gradient( to bottom, #1D2671, #C33764 );
+    background: linear-gradient( to bottom, #1D2671, #C33764 );
+    padding: 80px 0 80px;
+}
+
+.color .salmond-blog-area,
+.color .salmond-testimonial-area,
+.color .salmond-contact-area,
+.color .portfolio-area,
+.color.salmond-blog-area,
+.color.salmond-testimonial-area,
+.color.salmond-contact-area,
+.color.portfolio-area {
+    background: #C33764;
+    background: -webkit-linear-gradient( to bottom, #1D2671, #C33764 );
+    background: linear-gradient( to bottom, #1D2671, #C33764 );
+    padding: 80px 20px 50px;
+}
+
+.color .salmond-testimonial-area,
+.color.salmond-testimonial-area {
+    padding-bottom: 115px;
+}
+
+.color.salmond-contact-area,
+.color .salmond-contact-area {
+    padding-bottom: 80px;
+}
+
+.color .salmond-services-area:after,
+.color .salmond-author-area:before,
+.color .salmond-blog-area:before,
+.color .salmond-testimonial-area:before,
+.color .salmond-testimonial-area:after,
+.color.salmond-services-area:after,
+.color.salmond-author-area:before,
+.color.salmond-blog-area:before,
+.color.salmond-testimonial-area:before,
+.color.salmond-testimonial-area:after {
+    border: transparent;
+}
+
+.color .author-image {
+    border: 1px solid #202c3a;
+}
+
+.color .author-details:after,
+.color .author-social-link:after,
+.color .author-image:before,
+.color .author-image:after {
+    background: transparent;
+}
+
+.color .salmond-author-area .owl-prev,
+.color .salmond-author-area .owl-next,
+.color .testimonial-details p,
+.color .testimonial-container .owl-dot,
+.color.salmond-author-area .owl-prev,
+.color.salmond-author-area .owl-next,
+.color.testimonial-details p,
+.color.testimonial-container .owl-dot {
+    background: #202c3a;
+    color: #d1d1d1;
+}
+
+.color .author-details,
+.color .author-social-link,
+.dark .author-details,
+.dark .author-social-link {
+    background: #202c3a;
+    border: 1px solid #0e1319;
+}
+
+.color .salmond-blog-posts article,
+.color .widget,
+.color.salmond-blog-posts article,
+.color.widget {
+    border: 1px solid #0e1319;
+    background: #C33764;
+    background: -webkit-linear-gradient( to bottom, #1D2671, #C33764 );
+    background: linear-gradient( to bottom, #1D2671, #C33764 );
+}
+
+.color .testimonial-item {
+    border-left: 1px solid #202c3a;
+}
+
+.color .salmond-testimonial-area:after,
+.color .salmond-testimonial-area:before,
+.color .salmond-blog-area:before,
+.color .salmond-services-area:after,
+.color .salmond-author-area:before,
+.color.salmond-testimonial-area:after,
+.color.salmond-testimonial-area:before,
+.color.salmond-blog-area:before,
+.color.salmond-services-area:after,
+.color.salmond-author-area:before {
+    border: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    right: 0;
+    left: 0;
+}
+
+.color .salmond-testimonial-area:after,
+.color.salmond-testimonial-area:after {
+    top: 100%;
+    background: linear-gradient( to bottom, #1D2671, #C33764 );
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+    -webkit-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+.color .salmond-testimonial-area:before,
+.color .salmond-blog-area:before,
+.color .salmond-author-area:before,
+.color.salmond-testimonial-area:before,
+.color.salmond-blog-area:before,
+.color.salmond-author-area:before {
+    top: 0;
+    background: linear-gradient( to bottom, #1D2671, #C33764 );
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+    -webkit-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+.color .salmond-services-area:after,
+.color.salmond-services-area:after {
+    top: 100%;
+    background: linear-gradient( to bottom, #1D2671, #C33764 );
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+    -webkit-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+.color .banner-about-intro,
+.color .salmond-parallax-background:before,
+.color.salmond-parallax-background:before,
+.blog .content-shrink.color,
+.color.footer-area,
+.blog .content-area.color {
+    background: #C33764;
+    background: -webkit-linear-gradient( to bottom, #1D2671, #C33764 );
+    background: linear-gradient( to bottom, #1D2671, #C33764 );
+}
+
+.back-to-top.color a {
+    color: #fff;
+}
+
+.color .salmond-parallax-background:before,
+.color.salmond-parallax-background:before {
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right;
+    -webkit-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+.color .salmond-format-chat .entry-content p:nth-child(odd) {
+    background: #141c24;
+}
+
+.color .footer-area,
+.color.footer-area {
+    border-top: 1px solid #141c24;
+}
+
+.color.footer-area {
+    margin-top: 0;
+}
+
+.color .comments-title,
+.color .comment-reply-title {
+    border-bottom: 1px solid #141c24;
+}
+
+.color .comment-form input[type="text"],
+.color .comment-form input[type="email"],
+.color .comment-form input[type="url"],
+.color .comment-form textarea,
+.color .contact-form form input[type="text"],
+.color .contact-form form input[type="email"],
+.color .contact-form form input[type="url"],
+.color .contact-form form textarea {
+    border: 1px solid #141c24;
+}
+
+.salmond-initial-menu.color .salmond-navbar-initial {
+    background: #C33764;
+    background: -webkit-linear-gradient( to right, #1D2671, #C33764 );
+    background: linear-gradient( to right, #1D2671, #C33764 );
+    border-bottom: 1px solid #0e1319;
+}
+
+.intro-effect-fadeout.modify .content-area.color > div.container:not(.title),
+.content-area.color {
+    background: #C33764;
+    background: -webkit-linear-gradient( to bottom, #1D2671, #C33764 );
+    background: linear-gradient( to bottom, #1D2671, #C33764 );
+    z-index: 1;
+    position: relative;
+}
+
+.color .header-v3 .header-top {
+    background: #C33764;
+    background: -webkit-linear-gradient( to right, #1D2671, #C33764 );
+    background: linear-gradient( to right, #1D2671, #C33764 );
+    padding: 10px 0;
+}
+
+
+
+/*
+14. Footer CSS
+==========================================================
+*/
+.footer-area {
+    position: relative;
+    background-position: center center;
+    padding: 50px 0;
+    background-repeat: no-repeat;
+    border-top: 1px solid #ededed;
+    margin-top: 70px;
+}
+
+.footer {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-logo p {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: 'Cabin', sans-serif;
+}
+
+.footer-logo .navbar-brand {
+    float: none;
+}
+
+.footer-logo i {
+    margin-right: 3px;
+    color: #F1A9A0;
+}
+
+.footer a,
+.footer p,
+.footer-logo .navbar-brand {
+    color: #333;
+}
+
+
+.back-to-top {
+    font-family: 'Cabin', sans-serif;
+    position: fixed;;
+    bottom: 60px;
+    right: -18px;
+    z-index: 5000;
+    margin-left: -0.5em;
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 0.2em;
+    display: none;
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+.back-to-top a {
+    color: #333;
+    text-decoration: none;
+}
+
+.menudesp {
+    font-family: 'Cabin', sans-serif;
+    position: fixed;
+    bottom: 50%;
+    left: 9px;
+    z-index: 100;
+    margin-left: -0.5em;
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 0.2em;
+    /* display: none; */
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.menudes a {
+    color: #333;
+    text-decoration: none;
+}
+
+.search .subline span {
+    font-weight: 700;
+}
+
+
+/*
+15. Preview CSS
+==========================================================
+*/
+
+.preview-banner-area {
+    padding: 100px 0 200px;
+    text-align: center;
+}
+
+.salmond-preview-header .salmond-navbar-initial {
+    background: #fff;
+    margin-bottom: 0;
+    border: 0;
+    padding: 15px 0;
+    border-radius: 0;
+    box-shadow: 0 0 40px 5px #f5f5f5;
+}
+
+.salmond-preview-header .salmond-navbar-initial ul li a,
+.preview-banner-area p,
+.portfolio-grid-demo-area p {
+    font-family: 'Cabin', sans-serif;
+}
+
+.preview-banner-area h2,
+.portfolio-grid-demo-area h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.preview-banner-area a.purchase {
+    background: #0e1319;
+    color: #fff;
+    padding: 15px 50px;
+    font-family: 'Cabin', sans-serif;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.single-preview {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.single-preview img {
+    box-shadow: 0 0 30px 10px #ededed;
+}
+
+.single-preview h4 {
+    position: absolute;
+    top: 25%;
+    background: #ededed;
+    padding: 15px 20px;
+    letter-spacing: 0.07em;
+    font-size: 14px;
+    left: -20px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 320ms ease;
+       -moz-transition: all 320ms ease;
+        -ms-transition: all 320ms ease;
+         -o-transition: all 320ms ease;
+            transition: all 320ms ease;
+}
+
+.single-preview h4 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.single-preview:hover h4 {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.demo-preview-area .row {
+    margin-bottom: 150px;
+}
+
+.demo-preview h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portfolio-grid-demo-area {
+    background-color: #141c24;
+    color: #fff;
+}
+
+.portfolio-grid-demo-area.feature-one .container {
+    background-image: url('../images/preview/grid.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.portfolio-grid-demo-area.feature-two .container {
+    background-image: url('../images/preview/code.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.portfolio-grid-demo-area h2 {
+    padding-top: 150px;
+}
+
+.portfolio-grid-demo-area p {
+    padding-bottom: 150px;
+}
+
+.color-1,
+.color-2,
+.color-3 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    border: 10px solid #ededed;
+}
+
+.color-1 {
+    background: #fff;
+}
+
+.color-2 {
+    background: #0e1319;
+}
+
+.color-3 {
+    background: #C33764;
+    background: -webkit-linear-gradient( to bottom, #1D2671, #C33764 );
+    background: linear-gradient( to bottom, #1D2671, #C33764 );
+}
+
+.salmond-shape svg {
+    height: 50px;
+    display: block;
+    width: -webkit-calc(100% + 1.3px);
+    width: calc(100% + 1.3px);
+    position: relative;
+    left: 50%;
+}
+
+.salmond-shape-bottom svg {
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.salmond-shape-top svg {
+    -webkit-transform: translateX(-50%)  rotateX(180deg);
+    -ms-transform: translateX(-50%)  rotateX(180deg);
+    transform: translateX(-50%)  rotateX(180deg);
+}
+
+.salmond-shape-grey {
+    fill: #f5f5f5;
+}
+
+.salmond-shape-white {
+    fill: #141c24;
+}
+
+.salmond-shape-dark {
+    background: #0e1319;
+}
+
+.salmond-shape-dark path {
+    fill: #141c24;
+}
+
+.salmond-shape-darker {
+    background: #141c24;
+}
+
+.salmond-shape-darker path {
+    fill: #0e1319;
+}
+
+.salmond-banner-five {
+    position: relative;
+}
+
+.salmond-banner-five:before {
+    background: url(../images/bg.png);
+    background-position: -335px -50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.salmond-banner-five:after {
+    background: url(../images/bg.png);
+     background-position: 790px -185px; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.salmond-banner-six {
+    text-align: left;
+}
+
+.dark .salmond-banner-six {
+    background: #141c24;
+}
+
+.salmond-banner-six h2 {
+    font-size: 65px;
+    line-height: 75px;
+    font-weight: 700;
+    width: 75%;
+    font-family: 'Roboto', sans-serif;
+    text-transform: inherit;
+    letter-spacing: inherit;
+}
+
+.dark .salmond-banner-six h2 {
+    color: #FFFFFF;
+}
+
+.salmond-banner-six a.purchase {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+.logo {
+    width: 10%;
+}
