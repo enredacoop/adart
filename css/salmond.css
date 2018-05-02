@@ -2287,7 +2287,7 @@ blockquote:before {
 }
 
 .salmond-services-area {
-    padding: 80px 40px 60px;
+    padding: 80px 15px 40px 60px;
     position: relative;
 }
 
@@ -3130,6 +3130,30 @@ blockquote:before {
     text-decoration: none;
 }
 
+.linkedin {
+    font-family: 'Cabin', sans-serif;
+    position: fixed;
+    bottom: 50%;
+    right: 20px;
+    z-index: 100;
+    margin-left: -0.5em;
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 0.2em;
+    display: block;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.linkedin a {
+    color: #333;
+    text-decoration: none;
+}
 .menudesp {
     font-family: 'Cabin', sans-serif;
     position: fixed;
