@@ -6,7 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>Addart - Jobs</title>
-        <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+
+        <link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/custom.css' type='text/css' media='all' />
+
         <link rel='stylesheet' href='css/jquery.fancybox.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/owl.carousel.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/owl.theme.default.min.css' type='text/css' media='all' />
@@ -15,10 +18,8 @@
         <link rel='stylesheet' href='css/normalize.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/reset.css' type='text/css' media='all' />
-        <link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/salmond.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
-        <link rel='stylesheet' href='css/animate.css' type='text/css' media='all' />
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Our Custom CSS -->
@@ -39,14 +40,15 @@
                 </div>
 
                 <div class="sidebar-header">
-                    <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>                    <span class="section-menu-title">Jobs</span>
+                    <a href="index.html"><img class="logo" src="images/logo.jpg" alt="Logo"></a>
+                    <span class="section-menu-title">Jobs</span>
                 </div>
 
                 <ul class="list-unstyled components">
-                    <li>
+                    <li id="home">
                         <a href="index.html">Home</a>
                     </li>
-                    <li>
+                    <li id="about">
                         <a href="about_us.html">About us</a>
                     </li>
                     <li id="services">
@@ -74,6 +76,10 @@
                             Antartica, Example 0987<br>
                             <abbr title="Phone">P:</abbr> (123) 456-7890
                         </address>
+                    </div>
+
+                    <div class="brief">
+                        Do you want to work with us? <a href="contact_us.html">Brief Us</a>
                     </div>
                 </ul>
             </nav>
@@ -109,7 +115,7 @@
             <div id="primary" class="content-area">
 
                 <div class="row">
-                    <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>                    <span class="section-menu-title">Jobs</span>
+                    <a href="index.html"><img class="logo" src="images/logo.jpg" alt="Logo"></a>                    <span class="section-menu-title">Jobs</span>
                  
                     <div class="col-xs-12 salmond-blog-posts">
                         <div class="theiaStickySidebar">
@@ -121,16 +127,17 @@
                                 <div class="container-fluid">
                                     <div class="row">
 
-                                        <div class="header banner-one">
+                                        <div id="header-jobs" class="header banner-one">
                                             <div class="bg-img"></div>
 
-                                            <div class="title">
+                                            <div class="title center">
                                                 
-                                                <h5>We do a lot of wonderful things</h5>
-                                                <h1>Jobs.</h1>
-<!-- <!--                                                 <p class="subline">
-                                                    <img src="images/signature-white.png" alt="Jesica Doe">
-                                                </p> --> -->
+                                                <h1>Jobs</h1>
+                                            </div>
+                                            <div class="subtitle">
+                                                <p class="subline"> 
+                                                   Are you enthusiastic, talented, full of ideas, capable of making proposals, and want to push your boundaries?
+                                                </p>
 
                                             </div>
 
@@ -142,20 +149,22 @@
 
                            <!-- ======================== Contact Area ========================== -->
 
-                            <section class="salmond-contact-area" id="contact">
+                            <section class="salmond-contact-area pt-0" id="contact">
                                 <div class="row">
                                     <div class="salmond-contact">
-                                        <div class="col-xs-12 col-sm-7 wow fadeInLeft" id="contact-jobs">
+                                        <div class="col-xs-12 col-sm-6 wow fadeInLeft" id="contact-jobs">
                                             <div class="contact-form-details">
-                                                <h3 id="reply-title" class="comment-reply-title">We Love to hear from you!</h3>
-                                                <p id="desc-p">You're enthusiastic, talented, full of ideas, capable of making proposals, and want to push your boundaries? You've come to the right place, and we already want to meet you. The job of your dreams just might be here.</p>
-                                            </div><!-- .contact-form-details -->
-                                        </div><!-- .col-xs-12 .col-sm-5 -->
-                                        <div class="col-xs-12 col-sm-5 wow fadeInRight">
-                                            <img src="images/image11.png"/>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 wow fadeInUp">
-                                            <div class="contact-form">
+                                                <!--h3 id="reply-title" class="comment-reply-title">We Love to hear from you!</h3-->
+                                                <div class="text-center">
+                                                    <img class="brand-text-image" src="images/logo.jpg"/>
+                                                </div>
+                                                <p id="desc-p">
+                                                    You're enthusiastic, talented, full of ideas, capable of making proposals, and want to push your boundaries? You've come to the right place, and we already want to meet you.
+                                                    <br><br>
+                                                    The job of your dreams just might be here.
+                                                </p>
+
+                                                <div class="contact-form">
                                                 <form action="#" method="post">
 
                                                     <p class="contact-form-author">
@@ -179,9 +188,25 @@
 
                                                 </form>
                                             </div><!-- .contact-form -->
-                                        </div><!-- .col-xs-12 col-sm-6 -->
+
+                                            </div><!-- .contact-form-details -->
+                                        </div><!-- .col-xs-12 .col-sm-5 -->
+
+
+                                        <div class="col-xs-12 col-sm-6 wow fadeInRight pl-0" style="position: relative;">
+                                            <span class="text-over-image">WE WOULD LOVE TO HEAR FROM YOU!</span>
+                                            <img src="images/jobs-image.jpg"/>
+                                        </div>
+                                    
                                     </div> <!-- .salmond-contact -->
                                 </div><!-- .row -->
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 mt-3">
+                                        <div class="brief">
+                                            Do you want to work with us? <a href="contact_us.html">Brief Us</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </section><!-- .salmond-contact-area -->
 
                         </div><!-- .theiaStickySidebar -->
@@ -207,7 +232,9 @@
         <script src='js/extra.js'></script>
         <script src='js/app.js'></script>
 
-        <div class="overlay-4"></div>
+        <div class="overlay-4">
+            <img class="logo-overlay" src="images/logo.jpg" alt="Logo">
+        </div>
 
 
         <!-- jQuery CDN -->

@@ -6,7 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>Addart</title>
-        <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/custom.css' type='text/css' media='all' />
+
         <link rel='stylesheet' href='css/jquery.fancybox.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/owl.carousel.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/owl.theme.default.min.css' type='text/css' media='all' />
@@ -15,16 +17,13 @@
         <link rel='stylesheet' href='css/normalize.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/reset.css' type='text/css' media='all' />
-        <link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/salmond.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="style3.css">
         
     </head>
-    <body>
+    <body id="index">
         <div  class="salmond-preloader" id="preloader-1">
             <div id="salmond-status" class="ball-scale">
                 <div><i class="fa fa-spinner fa-spin" style="font-size:24px"></i></div>
@@ -38,14 +37,14 @@
                 </div>
 
                 <div class="sidebar-header">
-                    <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+                    <a href="index.html"><img class="logo" src="images/logo.jpg" alt="Logo"></a>
                 </div>
 
                 <ul class="list-unstyled components">
                     <li class="active" id="home">
                         <a href="#">Home</a>
                     </li>
-                    <li>
+                    <li id="about">
                         <a href="about_us.html">About us</a>
                     </li>
                     <li id="services">
@@ -73,6 +72,10 @@
                             Antartica, Example 0987<br>
                             <abbr title="Phone">P:</abbr> (123) 456-7890
                         </address>
+                    </div>
+
+                    <div class="brief">
+                        Do you want to work with us? <a href="contact_us.html">Brief Us</a>
                     </div>
                 </ul>
             </nav>
@@ -108,7 +111,7 @@
             <div id="primary" class="content-area">
 
                 <div class="row">
-                    <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>                 
+                    <a href="index.html"><img class="logo" src="images/logo.jpg" alt="Logo"></a>                 
                     <div class="col-xs-12 salmond-blog-posts">
                         <div class="theiaStickySidebar">
 
@@ -119,16 +122,15 @@
                                 <div class="container-fluid">
                                     <div class="row">
 
-                                        <div class="header banner-one">
+                                        <div id="header-index" class="header banner-one">
                                             <div class="bg-img"></div>
 
                                             <div class="title">
-                                                
-                                                <h5>Just Believe On Your Skill</h5>
-                                                <h1>HE</h1>
-                                                <h1>LLO!</h1>
+                                                <h1><span class="txt-rojo">hi</span><span class="txt-azul">!</span></h1>
+                                                <h5>The art of Ad Operations</h5>
+                                            </div>
+                                            <div class="subtitle">
                                                 <p class="subline"><strong>Addart</strong> is a Global Digital Company that provides tailored advertising Ad Operations support delivering strong revenue return for our clients</p>
-
                                             </div>
 
                                             <button class="trigger">Scroll</button>
@@ -141,24 +143,39 @@
 
                             <!-- ======================== Services Area ========================== -->
 
-                          <section class="salmond-services-area" id="services">
+                            <section class="salmond-services-area" id="services">
                                 <div class="row">
-
-                                    <div class="col-md-8 col-sm-8 wow fadeInLeft" id="main-description">
-                                        <div class="section-heading" id="">
+                                    <div class="col-md-12 col-sm-4 col-lg-4">
+                                        <h1 id="intro-p"><b>The Art of Ad Operations...</b></h1>
+                                    </div>
+                                    <div class="col-md-6 col-sm-4 col-lg-4 wow fadeInLeft" id="main-description">
+                                        <div class="section-heading">
                                             <p id="intro-p">Throughout your project, we act as an extension of your team. And because we're on the same team, we do everything with success, transparency and quality in mind.</p>
                                             <p id="intro-p">We apply our highest standards to every detail in order to make your project an outstanding experience.</p>
-                                            <p id="intro-p">A real digital help for equity investment. We've made a place for you here. Your place. No need to schedule meetings anymore: we share the same space. Let's share our days as well.</p>
                                         </div><!-- .section-heading -->
                                     </div><!-- .col-md-4 .col-sm-4 -->
-                                    <div class="col-md-4 col-sm-4 wow fadeInUp">
+                                    <div class="col-md-6 col-sm-4 col-lg-4">
+                                        <div class="section-heading">
+                                            <p id="intro-p">A real digital help for equity investment. We've made a place for you here. Your place. No need to schedule meetings anymore: we share the same space. Let's share our days as well.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 wow fadeInUp mt-5">
                                         <div class="salmond-service">
-                                            <img src="images/image10.png"/>
+                                            <img src="images/hi.jpg" class="full-width"/>
                                         </div><!-- .salmond-service -->
                                     </div><!-- .col-md-4 .col-sm-4 -->
+                                </div><!-- .row -->   
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 mt-3">
+                                        <div class="brief">
+                                            Do you want to work with us? <a href="contact_us.html">Brief Us</a>
+                                        </div>
+                                    </div>
+                                </div>
 
-
-                                </div><!-- .row -->                            
+                            </section>                         
 
                         </div><!-- .theiaStickySidebar -->
                     </div><!-- .col-xs-12 salmond-blog-posts -->
@@ -167,7 +184,7 @@
         </div><!-- #header-container -->
 
         <div class="menudesp">
-            <a href="#" id="sidebarCollapse">Menu</a>
+            <a href="##" id="sidebarCollapse">Menu</a>
         </div>
         <div class="linkedin">
             <a class="fa fa-linkedin icon" href="#"></a>
@@ -183,7 +200,9 @@
         <script src='js/extra.js'></script>
         <script src='js/app.js'></script>
 
-        <div class="overlay-1"></div>
+        <div class="overlay-1">
+            <img class="logo-overlay" src="images/logo.jpg" alt="Logo">
+        </div>
 
 
         <!-- jQuery CDN -->

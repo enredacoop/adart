@@ -1,0 +1,161 @@
+.txt-verde {color: var(--verde);}
+.txt-marron {color: var(--marron);}
+.txt-rojo {color: var(--rojo);}
+.txt-amarillo {color: var(--amarillo);}
+.txt-azul {color: var(--azul);}
+
+
+/* Personalización de SCROLL */
+#index .scroll {
+	color: var(--rojo);
+}
+
+/* Textos */
+h1#intro-p {
+  font-size: 36px;
+  margin-top: 1em;
+}
+div.subtitle > h5 {
+  display: block !important;
+  color: #fff !important;
+  font-size: 2em !important;
+  font-family: Aldo-font !important;
+  position: relative;
+  top: 50px;
+}
+.section-menu-title {
+	color: var(--gris);
+	position: relative;
+	top: -20px;
+}
+.text-over-image {
+	position: absolute;
+	font-size: 4em;
+	word-break: break-word;
+	width: 160px;
+	top: 20%;
+	left: 25%;
+}
+.comment-reply-title {
+	border-bottom: none !important;
+}
+
+.white {
+	color: #fff;
+}
+
+/* Imágenes */
+#index img.full-width {
+	height: 300px;
+	width: 100%;
+	object-fit: cover;
+}
+.image-about {
+	height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+.brand-text-image {
+	width: 30%;
+  padding-bottom: 25px;
+}
+
+/* Márgenes */
+.mt-2 { margin-top: 2em; }
+.mt-3 { margin-top: 3em; }
+.mt-5 { margin-top: 5em; }
+.mb-2 { margin-bottom: 2em; }
+
+/* Paddings */
+.pt-0 { padding-top: 0px !important; }
+.pl-0 { padding-left: 0px !important; }
+
+/* Enlaces */
+div.brief {
+	color: #333;
+}
+div.brief > a {
+	color: #000;
+	text-transform: uppercase;
+}
+	div.brief > a:hover {
+		color: var(--marron);
+	}
+
+li#home a:hover {color: var(--verde);}
+li#about a:hover {color: var(--rojo);}
+li#jobs a:hover {color: var(--amarillo);}
+li#services a:hover {color: var(--azul);}
+li#contact a:hover {color: var(--marron);}
+
+/* Bloques */
+#mCSB_1, #mCSB_1 #mCSB_1_container {
+	height: 100%;
+	max-height: 100%;
+}
+#more-info.row.row-about {
+	background: whitesmoke;
+	padding: 15px 10px;
+}
+.block-about {
+  padding: 25px !important;
+}
+	.block-about.bg-black {
+		color: #fff;
+		background: #000;
+	}
+	.block-about.bg-black #desc-p {
+		color: #fff;
+	}
+.services-title {
+	background-color: #303956;
+  color: #fff;
+  text-align: center;
+  padding: 60px;
+}
+	.services-title h2 > b {
+		display: block;
+		font-weight: bolder;
+		color: var(--gris);
+	}
+
+.point {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	background: var(--verde);
+  margin: 25px;
+}
+	.point.white {
+		background: #fff;
+	}
+
+address {
+	color: #fff;
+	margin-top: 20px !important;
+}
+
+/* Personalice timeline */
+ul.cd-timeline-navigation {
+	display: none !important;
+}
+.timeline ol {
+	list-style: none !important;
+}
+.cd-horizontal-timeline .events-wrapper::before, 	
+.cd-horizontal-timeline .events-wrapper::after {
+	background: none !important;
+}
+
+.events-wrapper > .events {
+	width: 100% !important;
+}
+/*.events-wrapper > .events li {
+	position: relative;
+}
+	.events-wrapper > .events li > a {
+		width: 25%;
+		left: 0px !important;
+	}*/
+
+

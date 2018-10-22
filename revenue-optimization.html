@@ -6,7 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title>Addart - About us</title>
-        <link rel='stylesheet' href='style.css' type='text/css' media='all' />
+
+        <link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='css/custom.css' type='text/css' media='all' />
+
         <link rel='stylesheet' href='css/jquery.fancybox.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/owl.carousel.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/owl.theme.default.min.css' type='text/css' media='all' />
@@ -15,10 +18,8 @@
         <link rel='stylesheet' href='css/normalize.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/bootstrap.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/reset.css' type='text/css' media='all' />
-        <link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/salmond.css' type='text/css' media='all' />
         <link rel='stylesheet' href='css/responsive.css' type='text/css' media='all' />
-        <link rel='stylesheet' href='css/animate.css' type='text/css' media='all' />
         <!-- Bootstrap CSS CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Our Custom CSS -->
@@ -39,14 +40,14 @@
                 </div>
 
                 <div class="sidebar-header">
-                    <img class="logo" src="images/logo.png" alt="Logo">
+                    <img class="logo" src="images/logo.jpg" alt="Logo">
                 </div>
 
                 <ul class="list-unstyled components">
-                    <li>
+                    <li id="home">
                         <a href="index.html">Home</a>
                     </li>
-                    <li class="active">
+                    <li id="about" class="active">
                         <a href="about_us.html">About us</a>
                     </li>
                     <li id="services" class="active">
@@ -74,6 +75,10 @@
                             Antartica, Example 0987<br>
                             <abbr title="Phone">P:</abbr> (123) 456-7890
                         </address>
+                    </div>
+
+                    <div class="brief">
+                        Do you want to work with us? <a href="contact_us.html">Brief Us</a>
                     </div>
                 </ul>
             </nav>
@@ -109,7 +114,7 @@
             <div id="primary" class="content-area">
 
                 <div class="row">
-                    <img class="logo" src="images/logo.png" alt="Logo">
+                    <img class="logo" src="images/logo.jpg" alt="Logo">
                  
                     <div class="col-xs-12 salmond-blog-posts">
                         <div class="theiaStickySidebar">
@@ -703,7 +708,9 @@
         <script src='js/extra.js'></script>
         <script src='js/app.js'></script>
 
-        <div class="overlay-3"></div>
+        <div class="overlay-3">
+            <img class="logo-overlay" src="images/logo.jpg" alt="Logo">
+        </div>
 
 
         <!-- jQuery CDN -->
