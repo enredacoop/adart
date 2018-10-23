@@ -472,9 +472,11 @@ button.trigger:focus {
 		text-align: center;
 		-webkit-transform: translateX(-75%) translateY(-90%);
     transform: translateX(-50%) translateY(-90%);
+    font-size: 0.8em;
+    text-align: center;
 	}
 		.intro-effect-side #header-contact .title h1 {
-			color: var(--dark);
+			color: var(--azul);
 		}
 		.intro-effect-side #header-contact .subtitle {
 			-webkit-transform: translateX(-20%) translateY(-50%);
@@ -558,6 +560,9 @@ button.trigger:focus {
 		.intro-effect-side.modify #header-contact .title h1 {
 			color: var(--verde);
 		}
+			.intro-effect-side.modify #header-contact .title h1 > span {
+				color: var(--marron);
+			}
 
 		.intro-effect-side.modify #header-contact .subtitle {
 		  -webkit-transform: translateX(-100%) translateY(120%);
@@ -565,7 +570,7 @@ button.trigger:focus {
     	z-index: 120
 		}
 			.intro-effect-side.modify #header-contact .subtitle .subline {
-				color: var(--dark);
+				color: var(--azul);
 			}
 
 
