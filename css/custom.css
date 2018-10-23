@@ -130,7 +130,7 @@ li#contact a:hover {color: var(--marron);}
 		background: #fff;
 	}
 
-address {
+address.white{
 	color: #fff;
 	margin-top: 20px !important;
 }
