@@ -12,7 +12,7 @@
 
 /* Textos */
 h1#intro-p {
-  font-size: 36px;
+  font-size: 40px;
   margin-top: 1em;
 }
 div.subtitle > h5 {
@@ -43,12 +43,16 @@ div.subtitle > h5 {
 .white {
 	color: #fff;
 }
+.underline {
+	text-decoration: underline !important;
+}
 
 /* Imágenes */
 #index img.full-width {
-	height: 300px;
+	height: 550px;
 	width: 100%;
 	object-fit: cover;
+  object-position: 50% 85%;
 }
 .image-about {
 	height: 350px;
@@ -73,6 +77,7 @@ div.subtitle > h5 {
 /* Enlaces */
 div.brief {
 	color: #333;
+	font-size: 17px;
 }
 div.brief > a {
 	color: #000;
@@ -118,6 +123,10 @@ li#contact a:hover {color: var(--marron);}
 		font-weight: bolder;
 		color: var(--gris);
 	}
+.home-title {
+	background-color: whitesmoke;
+  padding: 60px;
+}
 
 .point {
 	width: 25px;
@@ -134,6 +143,57 @@ address.white{
 	color: #fff;
 	margin-top: 20px !important;
 }
+
+/* Puntos permanentes */
+div.points-top {
+	position: fixed;
+	top: -10px;
+	right: 0px;
+	font-size: 40px;
+	cursor: default;
+	z-index: 9999;
+}
+	div.points-top > span {
+    display: inline-block;
+    width: 20px;
+	}
+
+span.points-home {
+	position: absolute;
+  top: 0px;
+  left: -60px;
+  font-size: 60px !important;
+  cursor: default;
+  margin-top: 0px !important;
+  color: var(--verde) !important;
+}
+	span.points-home > span {
+    display: block;
+    height: 75px;
+	}
+span.points-menu {
+	position: absolute;
+	top: -10px;
+	right: -25px;
+	font-size: 40px;
+	cursor: default;
+}
+	span.points-menu > span {
+    display: block;
+    height: 23px;
+	}
+span.points-scroll {
+	position: absolute;
+	top: 0px;
+	right: 24px;
+	font-size: 40px;
+	cursor: default;
+}
+	span.points-scroll > span {
+    display: block;
+    height: 40px;
+	}
+
 
 /* Personalice timeline */
 ul.cd-timeline-navigation {

@@ -150,7 +150,7 @@ button.trigger {
   border: none;
   background: transparent;
   color: var(--rojo);
-  font-size: 11px;
+  font-size: 15px;
   text-align: center;
   cursor: pointer;
   letter-spacing: 0.2em;
@@ -158,7 +158,7 @@ button.trigger {
   left: 48%;
   word-break: break-all;
   width: 0;
-  line-height: 12px;
+  line-height: 16px;
   text-transform: uppercase;
 }
 button.trigger:hover, button.trigger:focus {
@@ -476,7 +476,7 @@ button.trigger:focus {
     text-align: center;
 	}
 		.intro-effect-side #header-contact .title h1 {
-			color: var(--azul);
+			color: var(--verde);
 		}
 		.intro-effect-side #header-contact .subtitle {
 			-webkit-transform: translateX(-20%) translateY(-50%);
@@ -529,6 +529,7 @@ button.trigger:focus {
 	}
 		.intro-effect-side.modify #header-services .title h1 {
 			color: var(--verde);
+			font-size: 16em;
 		}
 		.intro-effect-side.modify #header-services .subtitle {
 		  -webkit-transform: translateX(-100%) translateY(100%);
@@ -555,7 +556,7 @@ button.trigger:focus {
 	  -webkit-transform: translateX(-100%) translateY(-55%);
     transform: translateX(-100%) translateY(-55%);
     width: 47%;
-    word-break: break-word;
+    word-break: initial;
 	}
 		.intro-effect-side.modify #header-contact .title h1 {
 			color: var(--verde);
@@ -570,7 +571,7 @@ button.trigger:focus {
     	z-index: 120
 		}
 			.intro-effect-side.modify #header-contact .subtitle .subline {
-				color: var(--azul);
+				color: var(--verde);
 			}
 
 
@@ -1126,14 +1127,19 @@ a.article, a.article:hover {
 	letter-spacing: 20px;
 	font-size: 20px;
 }
-#intro-p {
-	font-size: 1.3em;
+#intro-p,
+#intro-p > span {
+	font-size: 1.8em;
 	line-height: 1.2;
 	color: #3c3c3c;
 	margin-top:1em; 
+	font-family: Aldo-font;
+}
+#intro-p > span {
+  font-size: 1em;
 }
 #desc-p {
-	font-size: 1.7em;
+	font-size: 1.8em;
 	line-height: 1.2;
 	color: #3c3c3c; 
 }

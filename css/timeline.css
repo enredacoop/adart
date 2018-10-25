@@ -220,6 +220,7 @@ Main Components
   -webkit-transition: height 0.4s;
   -moz-transition: height 0.4s;
   transition: height 0.4s;
+  height: auto !important;
 }
 .cd-horizontal-timeline .events-content li {
   position: absolute;
@@ -302,7 +303,7 @@ Main Components
     font-size: 2rem;
   }
   .cd-horizontal-timeline .events-content p {
-    font-size: 1.8rem;
+    font-size: 1.8em;
   }
 }
 
